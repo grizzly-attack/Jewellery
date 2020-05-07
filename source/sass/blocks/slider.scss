@@ -1,0 +1,48 @@
+.slider__button--next {
+  right: 20px;
+}
+
+.slider__button--prev {
+  left: 20px;
+}
+
+.slider__button-image {
+  stroke: $brown;
+
+  transition: $time $timing opacity;
+}
+
+.slider__button {
+  &:hover .slider__button-image {
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .slider__button--next,
+  .slider__button--prev {
+    background-size: 38px 16px;
+    width: 36px;
+    height: 16px;
+  }
+
+  .slider__button--next {
+    right: 45px;
+  }
+
+  .slider__button--prev {
+    left: 45px;
+  }
+
+  .slider__button-image {
+    width: 38px;
+    height: 16px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .slider__button--next,
+  .slider__button--prev {
+    display: none;
+  }
+}

@@ -1,0 +1,169 @@
+.instagram {
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 98px;
+
+  @include padding;
+
+  box-sizing: border-box;
+}
+
+.instagram h2 {
+  @include title;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+}
+
+.instagram__link-container {
+  margin: 0;
+  text-align: center;
+}
+
+.instagram__container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+
+  margin-top: 62px;
+}
+
+.instagram__image-container {
+  line-height: 0;
+  margin-bottom: 30px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.instagram__column--right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 41.1%;
+}
+
+.instagram__image-container--top-right {
+  margin-bottom: 0;
+}
+
+.instagram__column {
+  height: auto;
+}
+
+.instagram__column--left {
+  width: 19.8%;
+}
+
+.instagram__column--middle {
+  width: 34.2%;
+}
+
+.instagram__image-container--top-left {
+  width: 48.5%;
+}
+
+.instagram__image-container--bottom-left,
+.instagram__image-container--top-right {
+  width: 45.5%;
+}
+
+.instagram__image-container--bottom-right {
+  width: 48.2%;
+  margin-top: auto;
+}
+
+@media (max-width: $desktop-width) {
+  .instagram {
+    margin-top: 74px;
+    margin-bottom: 61px;
+  }
+
+  .instagram__image-container {
+    margin-bottom: 16px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .instagram__image-container--top-right {
+    margin-bottom: 0;
+    width: 45%;
+  }
+
+  .instagram__column--left {
+    width: 19.8%;
+  }
+
+  .instagram__column--middle {
+    width: 34%;
+  }
+
+  .instagram__image-container--top-left {
+    width: 48%;
+  }
+
+  .instagram__image-container--bottom-left {
+    width: 46%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .instagram {
+    margin-top: 62px;
+    margin-bottom: 51px;
+  }
+
+  .instagram__container {
+    margin-top: 47px;
+    flex-wrap: wrap;
+  }
+
+  .instagram__column--right {
+    width: 100%;
+  }
+
+  .instagram__column--left {
+    width: 44.5%;
+  }
+
+  .instagram__column--middle {
+    width: 50%;
+    margin-bottom: 15px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .instagram__image-container--top-right,
+  .instagram__image-container--bottom-right {
+    display: none;
+  }
+
+  .instagram__image-container--bottom-left {
+    order: -1;
+    width: 45%;
+    margin-top: auto;
+  }
+
+  .instagram__image-container {
+    margin-bottom: 15px;
+  }
+
+  .instagram__image-container--middle {
+    margin-bottom: 12px;
+  }
+
+  .instagram__image-container--top-left {
+    width: 50%;
+  }
+
+  .instagram__image-container--bottom {
+    margin-bottom: 12px;
+  }
+}

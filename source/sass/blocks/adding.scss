@@ -1,0 +1,337 @@
+.adding {
+  position: relative;
+  width: 500px;
+  margin: auto;
+  padding: 47px 35px;
+  padding-bottom: 55px;
+  box-sizing: border-box;
+  background-color: $white;
+
+  z-index: 1002;
+}
+
+.adding__title {
+  @include title;
+  font-size: 26px;
+}
+
+.adding__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 43px;
+}
+
+.adding__photo {
+  margin: 0;
+  margin-top: 5px;
+}
+
+.adding__description {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.adding__name {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.adding__price {
+  margin: 0;
+  margin-top: 7px;
+  font-size: 18px;
+}
+
+.adding__range {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 22px;
+  font-size: 18px;
+  margin-left: auto;
+}
+
+.adding__range-input {
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.adding__range-input input {
+  border: 0;
+  padding: 0;
+  width: 100%;
+
+  text-align: center;
+}
+
+.adding__range-plus,
+.adding__range-minus {
+  color: $grey;
+  cursor: pointer;
+
+  width: 14px;
+  height: 14px;
+
+  @include button-style;
+  position: relative;
+
+  outline: none;
+  transition: $time $timing background-color;
+
+  &:hover {
+    color: $dark-grey;
+  }
+}
+
+.adding__range-plus {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 2px;
+
+    background-color: $grey;
+    top: 6px;
+    left: 0;
+    transition: $time $timing background-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 14px;
+
+    background-color: $grey;
+    top: 0;
+    left: 6px;
+
+    transition: $time $timing background-color;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    transition: $time $timing background-color;
+    background-color: $dark-grey;
+  }
+}
+
+.adding__range-minus {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 2px;
+
+    background-color: $grey;
+    top: 6px;
+    left: 0;
+
+    transition: $time $timing background-color;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transition: $time $timing background-color;
+    background-color: $dark-grey;
+  }
+}
+
+.adding__info {
+  margin-top: 51px;
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 14px;
+}
+
+.adding__info-item {
+  margin: 0;
+  font-weight: 400;
+}
+
+.adding__info-total {
+  margin: 0;
+}
+
+.adding__button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adding__button {
+  width: 200px;
+  padding: 24px 22px;
+  padding-bottom: 22px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.adding__button--continue {
+  background-color: transparent;
+  color: $dark-grey;
+}
+
+.adding__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  @include button-style;
+  width: 16px;
+  height: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    height: 16px;
+    width: 2px;
+
+    background-color: $dark-grey;
+    transform: rotate(-45deg);
+
+    top: 0;
+    left: 7px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    height: 16px;
+    width: 2px;
+
+    background-color: $dark-grey;
+    transform: rotate(45deg);
+
+    top: 0;
+    left: 7px;
+  }
+
+  outline: none;
+  transition: $time $timing background-color;
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: $brown;
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .adding {
+    width: 502px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .adding__photo {
+    margin-top: 3px;
+
+    img {
+      width: 88px;
+    }
+  }
+
+  .adding__range-plus {
+    margin-top: 3px;
+  }
+
+  .adding__button {
+    width: 206px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .adding {
+    width: 100%;
+
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 37px;
+    padding-bottom: 46px;
+  }
+
+  .adding__close-button {
+    top: 15px;
+    right: 30px;
+  }
+
+  .adding__title {
+    font-size: 24px;
+  }
+
+  .adding__container {
+    margin-top: 25px;
+  }
+
+  .adding__photo {
+    margin-top: 6px;
+
+    img {
+      width: 70px;
+      height: 63px;
+    }
+  }
+
+  .adding__description {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .adding__name {
+    font-size: 16px;
+  }
+
+  .adding__price {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .adding__range-plus {
+    margin-top: 6px;
+  }
+
+  .adding__range-input {
+    margin-top: 9px;
+
+    input {
+      font-size: 16px;
+    }
+  }
+
+  .adding__info {
+    flex-direction: column;
+    margin-top: 46px;
+    margin-bottom: 32px;
+
+    font-size: 12px;
+  }
+
+  .adding__info-item {
+    margin-bottom: 12px;
+  }
+
+  .adding__button-container {
+    flex-direction: column;
+  }
+
+  .adding__button {
+    width: 100%;
+  }
+
+  .adding__button--continue {
+    margin-bottom: 20px;
+  }
+}

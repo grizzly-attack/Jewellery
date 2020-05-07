@@ -1,0 +1,15 @@
+.link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  margin: 0 3px;
+  padding-bottom: 3px;
+
+  border-bottom: 1px solid $brown;
+
+  transition: $time $timing opacity;
+
+  &:hover {
+    opacity: 0.35;
+  }
+}

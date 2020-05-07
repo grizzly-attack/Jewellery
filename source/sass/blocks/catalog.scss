@@ -1,0 +1,183 @@
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 80px;
+
+  margin-bottom: 74px;
+
+  @include padding;
+
+  box-sizing: border-box;
+
+  img {
+    line-height: 0;
+  }
+}
+
+.catalog__filter {
+  width: 250px;
+  margin-right: 10px;
+}
+
+.catalog__container {
+  width: 74.5%;
+}
+
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog__item {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+
+  margin-right: 3.5%;
+  margin-bottom: 36px;
+  text-align: center;
+  width: 31%;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  img {
+    transition: $time $timing opacity;
+  }
+
+  &:hover img {
+    opacity: 0.75;
+  }
+
+  h3 {
+    margin: 0;
+    margin-top: 18px;
+    margin-bottom: 5px;
+
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+
+.catalog__button-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 37px;
+}
+
+.catalog__button {
+  @include button-style;
+  text-decoration: none;
+  color: inherit;
+
+  transition: $time $timing opacity;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.catalog__pagination {
+  padding: 0 10px;
+  padding-right: 30px;
+}
+
+.catalog__pagination-item {
+  display: inline-block;
+  margin-right: 10px;
+  color: $grey;
+  text-decoration: none;
+
+  transition: $time $timing color;
+
+  &--current {
+    color: $dark-grey;
+  }
+
+  &:hover {
+    color: $dark-grey;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .catalog {
+    flex-direction: column;
+    margin-top: 50px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .catalog__filter {
+    margin-right: 0;
+  }
+
+  .catalog__container {
+    width: 100%;
+  }
+
+  .catalog__item {
+    margin-right: 4.2%;
+    margin-bottom: 36px;
+    text-align: center;
+    width: 30.5%;
+
+    h3 {
+      margin-top: 17px;
+    }
+  }
+
+  .catalog__list {
+    margin-top: 50px;
+  }
+
+  .catalog__button-container {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .catalog {
+    margin-top: 40px;
+    margin-bottom: 64px;
+  }
+
+  .catalog__list {
+    margin-top: 40px;
+    justify-content: space-between;
+  }
+
+  .catalog__item {
+    margin-right: 0;
+    margin-bottom: 28px;
+    width: 45%;
+  }
+
+  .catalog__button-container {
+    margin-top: 14px;
+  }
+
+  .catalog__button {
+    display: none;
+  }
+
+  .catalog__pagination {
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 5px;
+  }
+
+  .catalog__pagination-item {
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,93 @@
+.subscription__text p {
+  margin: 0;
+  margin-top: 11px;
+  margin-bottom: 44px;
+
+  font-weight: 400;
+  color: $grey;
+}
+
+.subscription > p {
+  @include title;
+  text-align: left;
+  letter-spacing: 0.03em;
+}
+
+.subscription__input {
+  position: relative;
+}
+
+.subscription__input input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+
+  border-bottom: 1px solid $white;
+  border-radius: 0;
+  padding-bottom: 9px;
+  color: $white;
+
+  padding-right: 109px;
+  box-sizing: border-box;
+
+  outline: none;
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+
+.subscription__button {
+  min-width: 103px;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  box-sizing: border-box;
+
+  @include button-style;
+  padding-right: 47px;
+  color: $white;
+
+  outline: none;
+  transition: $time $timing opacity;
+
+  &:hover,
+  &:focus {
+    opacity: 0.35;
+  }
+}
+
+.subscription__button-image {
+  position: absolute;
+  stroke: $white;
+
+  top: 4px;
+  right: 0;
+}
+
+@media (max-width: $desktop-width) {
+  .subscription {
+    margin-bottom: 41px;
+  }
+
+  .subscription__text p {
+    margin-bottom: 44px;
+  }
+
+  .subscription > p {
+    margin-bottom: 0;
+    color: $white;
+  }
+
+  .subscription__button {
+    padding-right: 43px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .subscription {
+    margin-bottom: 0;
+  }
+}

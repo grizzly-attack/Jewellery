@@ -1,3 +1,34 @@
-h1 {
-  color: red;
-}
+@import "variables.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+@import "scaffolding.scss";
+@import "vendor/normalize.scss";
+@import "vendor/swiper.scss";
+@import "vendor/nouislider.min.scss";
+@import "blocks/button.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
+@import "blocks/banner.scss";
+@import "blocks/search-form.scss";
+@import "blocks/navigation.scss";
+@import "blocks/news.scss";
+@import "blocks/link.scss";
+@import "blocks/slider.scss";
+@import "blocks/blog.scss";
+@import "blocks/questions.scss";
+@import "blocks/instagram.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/popup.scss";
+@import "blocks/subscription.scss";
+@import "blocks/social.scss";
+@import "blocks/catalog.scss";
+@import "blocks/filter.scss";
+@import "blocks/range.scss";
+@import "blocks/product.scss";
+@import "blocks/goods.scss";
+@import "blocks/card.scss";
+@import "blocks/description.scss";
+@import "blocks/login.scss";
+@import "blocks/adding.scss";
+@import "blocks/pagination.scss";
+@import "blocks/price-slider.scss";

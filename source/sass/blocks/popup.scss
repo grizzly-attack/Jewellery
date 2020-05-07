@@ -1,0 +1,75 @@
+.popup {
+  display: none;
+}
+
+.popup--show {
+  display: flex;
+}
+
+.popup__bg--login {
+  width: 100%;
+  height: 100%;
+  top: 0;
+
+  background-color: rgba(29, 22, 19, 0.25);
+  position: fixed;
+  z-index: 1002;
+}
+
+.popup__wrapper {
+  display: flex;
+  overflow-y: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup--login {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1002;
+}
+
+.popup--adding {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1002;
+}
+
+.popup__bg--adding {
+  width: 100%;
+  height: 100%;
+  top: 0;
+
+  background-color: rgba(29, 22, 19, 0.25);
+  position: fixed;
+  z-index: 1002;
+}
+
+@media (max-width: $desktop-width) {
+  .popup__bg--filter {
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    background-color: rgba(29, 22, 19, 0.25);
+    position: fixed;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .popup__bg--filter {
+    background-color: $white;
+  }
+
+  .popup__bg--adding {
+    background-color: $white;
+  }
+}

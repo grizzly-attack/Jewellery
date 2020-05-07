@@ -1,0 +1,131 @@
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  min-height: 463px;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background-color: $dark-grey;
+  background-image: url("../img/bg-main_1@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+
+  color: $white;
+  text-align: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-main_1@2x.jpg");
+  }
+}
+
+.banner--catalog {
+  background-image: url("../img/bg-main_2@1x.jpg");
+  min-height: 261px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-main_2@2x.jpg");
+  }
+}
+
+.banner p {
+  width: 100%;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: italic;
+
+  text-align: center;
+  font-size: 22px;
+}
+
+
+.banner b {
+  width: 100%;
+
+  @include title;
+  text-transform: uppercase;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 700;
+  font-style: normal;
+}
+
+.banner--main p {
+  font-size: 38px;
+  line-height: 1.1;
+}
+
+.banner--main b {
+  font-size: 45px;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  font-style: normal;
+}
+
+@media (max-width: $desktop-width) {
+  .banner {
+    background-position: 50% 0;
+    padding-right: 43px;
+    padding-bottom: 22px;
+    min-height: 463px;
+  }
+
+  .banner b {
+    font-size: 34px;
+  }
+
+  .banner p {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .banner--main p {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .banner--main b {
+    font-size: 45px;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+  }
+
+  .banner--catalog {
+    min-height: 261px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .banner--main {
+    min-height: 462px;
+    padding-right: 18px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+    background-image: url("../img/bg-main-mobile_1@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-main-mobile_1@2x.jpg");
+    }
+  }
+
+  .banner--main p {
+    font-size: 34px;
+  }
+
+  .banner--main b {
+    font-size: 38px;
+  }
+}

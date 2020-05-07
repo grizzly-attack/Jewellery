@@ -1,0 +1,17 @@
+.button {
+  display: block;
+
+  @include button-style;
+  text-align: center;
+  color: $white;
+
+  background-color: $brown;
+  border: 1px solid $brown;
+
+  transition: $time $timing background-color, $time $timing color;
+
+  &:hover {
+    color: $brown;
+    background-color: $white;
+  }
+}

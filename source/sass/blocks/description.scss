@@ -1,0 +1,36 @@
+.description__title {
+  display: inline-block;
+  margin: 0;
+  margin-right: 32px;
+  color: $grey;
+}
+
+.description__info {
+  display: inline-block;
+  margin: 0;
+}
+
+.description__list {
+  @include list-reset;
+
+  margin-top: 19px;
+  font-size: 14px;
+}
+
+.description__item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 11px;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #f6f5f4;
+}
+
+.description__name {
+  margin: 0;
+}
+
+.description__text {
+  margin: 0;
+  font-weight: 400;
+}

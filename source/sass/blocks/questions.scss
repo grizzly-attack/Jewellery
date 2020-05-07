@@ -1,0 +1,162 @@
+.questions {
+  width: 100%;
+  margin-top: 117px;
+
+  @include padding;
+
+  box-sizing: border-box;
+}
+
+.questions h2 {
+  @include title;
+  font-size: 34px;
+  letter-spacing: 0.03em;
+}
+
+.questions__container {
+  width: 83%;
+  margin: 0 auto;
+  margin-top: 47px;
+}
+
+.questions__item {
+  position: relative;
+  padding: 41px 50px;
+  padding-top: 46px;
+
+  box-sizing: border-box;
+  border: 1px solid $brown;
+
+  &:not(:last-child) {
+    border-bottom: none;
+  }
+
+  cursor: pointer;
+  transition: $time $timing background-color;
+
+  &:hover {
+    background-color: $beige;
+  }
+}
+
+.questions__item > p {
+  margin: 0;
+  width: 64%;
+  font-size: 18px;
+}
+
+.questions__answer {
+  width: 64%;
+  font-weight: 400;
+  display: none;
+  margin-top: 29px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.questions__button {
+  @include button-style;
+  position: absolute;
+  top: 47px;
+  right: 52px;
+
+  width: 11px;
+  height: 11px;
+
+  border-right: 1px solid $brown;
+  border-bottom: 1px solid $brown;
+
+  transform: rotate(45deg);
+
+  outline: 0;
+
+  &:focus {
+    border-right: 1px solid $dark-grey;
+    border-bottom: 1px solid $dark-grey;
+  }
+}
+
+.accordion--open .questions__answer {
+  display: block;
+}
+
+.accordion--open .questions__button {
+  transform: rotate(225deg);
+  top: 52px;
+  right: 52px;
+}
+
+@media (max-width: $desktop-width) {
+  .questions {
+    margin-top: 72px;
+  }
+
+  .questions__container {
+    width: 100%;
+  }
+
+  .questions__item {
+    padding: 50px;
+    padding-top: 44px;
+    padding-bottom: 43px;
+  }
+
+  .questions__answer {
+    width: 92%;
+  }
+
+  .questions__item > p {
+    width: 92%;
+  }
+
+  .questions__button {
+    width: 17px;
+    height: 17px;
+
+    top: 40px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .questions {
+    margin-top: 58px;
+  }
+
+  .questions__container {
+    margin-top: 29px;
+  }
+
+  .questions__item {
+    padding: 25px;
+    padding-top: 15px;
+    padding-bottom: 19px;
+  }
+
+  .questions__button {
+    top: 16px;
+    right: 28px;
+
+    width: 14px;
+    height: 14px;
+  }
+
+  .questions__item > p {
+    font-size: 16px;
+    width: 86%;
+    line-height: 1.4;
+  }
+
+  .questions__answer {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 1.45;
+    width: 85%;
+  }
+
+  .accordion--open .questions__button {
+    top: 26px;
+    right: 27px;
+  }
+}
